@@ -46,24 +46,7 @@
               </select>
             </div>
 
-            <div class="mb-3">
-
-              <label for="image" class="form-label">Post Image</label>
-
-              <input type="hidden" name="oldImage" value="{{ $post->image }}">
-              @if ($post->image)
-              <img src="{{asset('storage/'.$post->image) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
-              @else
-                <img class="img-preview img-fluid mb-3 col-sm-5">
-              @endif
-              <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image"
-              onchange="previewImage()">
-              @error('image')
-                  <div class="invalid-feedback"> 
-                    {{ $message }}
-                  </div>
-              @enderror
-            </div>
+        
 
             <div class="mb-3">
               <label for="body" class="form-label">Body</label>
